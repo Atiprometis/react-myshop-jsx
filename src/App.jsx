@@ -1,32 +1,25 @@
-import { useState } from 'react'
-import { Routes, Route,Link } from 'react-router-dom'
 
-import HomePage from './pages/HomePage'
+import { Outlet, useLocation } from "react-router-dom";
 import About from './pages/About'
+import Navbar from './components/Navbar'
+import Image from './components/Image'
 
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const location = useLocation();
 
   return (
     <>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <button onClick={() => setCount((count) => count + 1)}></button>
-          count is {count}
-        </ul>
-      </nav>
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <Navbar/>
 
+      {/* {location.pathname !== "/about" && <Navbar/>}  */}
 
-      
+      <Outlet />
+      {/* <h1>asdasdasd</h1> */}
+     {/* <About/> */}
+     {/* <Image imageURL="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"/> */}
     </>
   )
 }
