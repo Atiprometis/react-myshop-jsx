@@ -1,0 +1,38 @@
+.uibutton{
+    height: 50px;
+    width: 200px;
+    color:black;
+    background: linear-gradient(45deg, 
+    rgb(255, 173, 173),    
+    rgb(255, 214, 165),
+    rgb(253, 255, 182),
+    rgb(202, 255, 191),     
+    rgb(155, 246, 255),     
+    rgb(160, 196, 255),   
+    rgb(189, 178, 255),  
+    rgb(255, 198, 255)
+  );
+  background-size: 400% 400%;
+  outline: 0 !important;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.uibutton:hover {
+    animation: rainbow 3s linear infinite; 
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

@@ -23,12 +23,6 @@ function AddTask({ addData }) {
         addData(item);
     };
 
-//     const data =[
-//     {id:1,content:'1',item:'mimi'},
-//     {id:2,content:'2',item:'mimi2'},
-//     {id:3,content:'3',item:'mimi3'}
-// ]
-
 useEffect(() => {
     
 }, [data]);
@@ -36,23 +30,20 @@ useEffect(() => {
     return ( 
         <>
             <div className='col-span-4 gap-3'>
-                <button onClick={addTasks}>click</button>
-                <div className="bg-blue-500 p-4 h-dvh ">Item 1
-                    <div>
+                <div className=' h-dvh bg-slate-800'>
+                    <div className="bg-slate-800 p-2 h-full  flex flex-col items-end">
+                    <button onClick={addTasks} className=' w-1/4 m-2 '>+</button>
+                        <div className='w-full'>
 
-                        {
-                            data.map(datass=>(
-                                <div className="bg-green-500 p-4  " onClick={ () => readTasks(datass)} key={datass.id}>
-                                {datass.content}{datass.item}
-                            </div>
-                            ))
-                        }
-                        
-                        {/* {data.map(datatask=>(
-                            <div className="bg-red-300 p-4  " key={datatask.id}>
-                                {datatask.content}{datatask.id}
-                            </div>
-                        ))} */}
+                            {
+                                data.map(datass=>(
+                                    <div className="bg-zinc-600 p-4 w-full" onClick={ () => readTasks(datass)} key={datass.id}>
+                                    {datass.content}{datass.item}
+                                </div>
+                                ))
+                            }
+                            
+                        </div>
                     </div>
                 </div>
                 

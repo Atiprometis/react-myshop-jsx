@@ -15,8 +15,8 @@ function TodoApp() {
 
     return (  
         <>
-        <div className={styleTodo.bodytodo}>
-            <h1>todo</h1>
+        <div className={styleTodo.bodytodo} >
+            <h1 className=' text-gray-50 uppercase m-3'>todo</h1>
             <div className='grid lg:grid-cols-12 gap-4'>
                 
             <AddTask addData={addData}/>
